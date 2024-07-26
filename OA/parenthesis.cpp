@@ -18,7 +18,6 @@ int main()
         {
             if (!st.empty())
             {
-                // check for closing bracket
                 char ch = st.top();
                 if ((c == '}' && ch == '{') || (c == ')' && ch == '(') || (c == ']' && ch == '['))
                 {
@@ -26,16 +25,16 @@ int main()
                 }
                 else
                 {
-                    ans += 1; // Mismatched closing bracket
+                    ans += 1; 
                 }
             }
             else
             {
-                ans += 1; // Unmatched closing bracket
+                ans += 1; 
             }
         }
     }
-    // Any unmatched opening brackets left in the stack
+
     ans += st.size();
     cout << ans << endl;
     return 0;
